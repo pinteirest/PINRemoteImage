@@ -23,7 +23,7 @@ jobs:
           GITHUB_CHANGELOG_API_KEY: ${{ secrets.GITHUB_TOKEN }}
           OSS_PROJECT: PINRemoteImage
         run: |
-          # gem install github_changelog_generator
+          gem install github_changelog_generator
           Scripts/release.sh --${{ github.event.inputs.release-type }}
           git push origin HEAD
       - name: Tag Release
